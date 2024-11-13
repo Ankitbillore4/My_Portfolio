@@ -14,10 +14,11 @@
 
 <body class="bgImage bg-[url('/images/bgimage.gif')]  bg-cover bg-center h-screen bg-no-repeat overflow-x-hidden ">
     <section class="main h-[100vh] w-[100vw] overflow-x-hidden">
-        <nav class="h-[13vh] w-[100vw] bg-black/70 backdrop-blur-sm border-white border-b-2 flex items-center justify-between text-white px-8 py-4">
+        <nav class="h-[13vh] w-[100vw] bg-black/70 backdrop-blur-sm border-white border-b-2 flex items-center justify-around text-white px-8 py-4">
             <!-- Part 1: Design by ANKIT -->
-            <div class="part1 text-3xl text-yellow-400 font-bold tracking-widest cursor-pointer">
-                Design By <span class="text-cyan-400">ANKIT</span>
+            <div class="part1 text-3xl text-yellow-400 font-bold tracking-widest cursor-pointer flex items-center">
+                <img class="h-[2.5vw]" src="./images/WELCOME-TO (6) new.png" alt="">
+                <img class="h-[6vw] w-[7vw]" src="./giphy-unscreen.gif" alt="">
             </div>
         
             <!-- Part 2: Navigation Links -->
@@ -70,11 +71,16 @@
                 <h1 class="rotate-[90deg] pixelfont text-[1vw] cursor-grabbing text-white">Scroll Down <i
                         class="ri-arrow-right-line "></i></h1>
             </div>
-            <div
-                class="h-[4vw] w-[4vw] rounded-[50%] bg-yellow-500 absolute bottom-[3vw] right-[4vw] z-[999999] cursor-pointer flex items-center justify-center hover:bg-white ease-linear duration-200">
-                <i class="ri-volume-up-fill text-[2vw] "></i>
+                    <!-- Volume Button -->
+            <div class="volume h-[4vw] w-[4vw] rounded-[50%] bg-yellow-500 absolute bottom-[3vw] right-[4vw] z-[999999] cursor-pointer flex items-center justify-center hover:bg-white ease-linear duration-200" onclick="toggleVolume()">
+                <i id="volume-up" class="ri-volume-up-fill text-[2vw]"></i>
+                <i id="volume-mute" class="ri-volume-mute-fill text-[2vw] hidden"></i>
             </div>
 
+            <!-- Audio Element -->
+            <audio id="background-music" autoplay loop>
+                <source src="./bgm.wav" type="audio/mp3">
+            </audio>
         </div>
         <section id="Achievements" class="page2 h-[89vh] w-[100vw]  flex flex-col items-center ">
             <div class="h-[20vh] w-[60vw]  -mt-[3vw] ">
