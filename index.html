@@ -14,30 +14,37 @@
 
 <body class="bgImage bg-[url('/images/bgimage.gif')]  bg-cover bg-center h-screen bg-no-repeat overflow-x-hidden ">
     <section class="main h-[100vh] w-[100vw] overflow-x-hidden">
-        <nav
-            class="h-[13vh] w-[100vw] bg-black/30 backdrop-blur-sm border-white border-b-2 flex items-center justify-around text-white  ">
-            <div class="part1 pixelfont">Design By <b>ANKIT</b></div>
-            <div class="part2 pixelfont flex gap-[1vw] ">
-                <h1 class="cursor-pointer">PROJECTS</h1>
-                <h1>/</h1>
-                <h1 class="cursor-pointer">ACHIVEMENT</h1>
-                <h1>/</h1>
-                <h1 class="cursor-pointer">PRICE</h1>
-                <h1>/</h1>
-                <h1 class="cursor-pointer">ABOUT ME</h1>
-                <h1>/</h1>
+        <nav class="h-[13vh] w-[100vw] bg-black/70 backdrop-blur-sm border-white border-b-2 flex items-center justify-between text-white px-8 py-4">
+            <!-- Part 1: Design by ANKIT -->
+            <div class="part1 text-3xl text-yellow-400 font-bold tracking-widest cursor-pointer">
+                Design By <span class="text-cyan-400">ANKIT</span>
             </div>
-            <div class="part3 pixelfont border-2 border-black px-[1.5vw] cursor-pointer">
-                <h1 class=" hover:text-[1.1vw]">HIRE ME</h1>
+        
+            <!-- Part 2: Navigation Links -->
+            <div class="part2 flex gap-6 text-xl font-pixel tracking-wide">
+                <h1 class="cursor-pointer nav-link"><a href=".">PROJECTS</a></h1>
+                <h1>/</h1>
+                <h1 class="cursor-pointer nav-link">ACHIEVEMENTS</h1>
+                <h1>/</h1>
+                <h1 class="cursor-pointer nav-link">PRICES</h1>
+                <h1>/</h1>
+                <h1 class="cursor-pointer nav-link">ABOUT ME</h1>
+            </div>
+        
+            <!-- Part 3: Hire Me Button -->
+            <div class="part3 border-2 border-yellow-500 px-6 py-2 rounded-lg cursor-pointer hover:bg-yellow-500 hover:text-black transform transition-all duration-300">
+                <h1 class="font-pixel">CONTACT ME</h1>
             </div>
         </nav>
+        
+        
         <!-- <nav class="fakenav hidden h-[13vh] w-[100vw] bg-black/30 backdrop-blur-sm border-white border-b-2 flex items-center justify-around text-white"></nav> -->
-        <div class="flex justify-center mt-[2vw]"><img class="h-[10vw]" src="./images/WELCOME-TO (6) new.png"></div>
+        <div class="flex justify-center mt-[4vw]"><img class="h-[10vw]" src="./images/WELCOME-TO (6) new.png"></div>
         <div class="text-center pixelfont -mt-[3.5vw]">
             <h1 class="text-[6vw] text-[#FEF9F2]"><b>My Portfolio</b></h1>
         </div> <!--bg-gradient-to-b from-white to-yellow-800 bg-clip-text text-transparent-->
         <div class="h-[22vw] w-[100vw]  flex items-center justify-between  ">
-            <div class="h-[20vw] w-[5vw]  ml-[4vw] flex flex-col items-center  text-[3vw] text-white ">
+            <div class="h-[15vw] w-[5vw] mb-[15vw] ml-[4vw]  flex flex-col items-center  text-[3vw] text-white ">
                 <a href="https://github.com/Ankitbillore4"><i
                         class="ri-github-fill hover:text-yellow-400 ease-linear duration-200"></i></a>
                 <a href="https://www.linkedin.com/in/ankit-billore"><i
@@ -55,9 +62,9 @@
                                     download="">Download</a></span> <span class="text-white">My</span> <span
                                 class="text-yellow-400">CV</span></b></h1>
                 </div>
-                <div class="mt-[1vw]  ">
+                <!-- <div class="mt-[1vw]  ">
                     <img class="h-[12vw] w-[40vw]" src="./images/running-3-ideiot-unscreen.gif" alt="">
-                </div>
+                </div> -->
             </div>
             <div class="h-[40vh]  mr-[3vw] flex flex-col items-center ">
                 <h1 class="rotate-[90deg] pixelfont text-[1vw] cursor-grabbing text-white">Scroll Down <i
@@ -70,7 +77,7 @@
 
         </div>
         <section class="page2 h-[89vh] w-[100vw]  flex flex-col items-center ">
-            <div class="h-[20vh] w-[60vw]  mt-[6vw] ">
+            <div class="h-[20vh] w-[60vw]  -mt-[3vw] ">
                 <div class="flex items-center justify-center pt-[2vw]">
                     <img class="h-[5vw]" src="./images/trophy.png" alt="">
                     <h1 class="pixelfont text-[4vw] tracking-wider pl-[2vw] text-yellow-400">Achivement</h1>
@@ -139,27 +146,40 @@
                 </div>
             </div>
         </section>
-        <section class="page4 h-[70vh] w-[100vw]  flex flex-col items-center ">
-            <div class="flex items center justify-center text-center h-[10vw] w-[30vw] mt-[4vw]">
+        <section class="page4 h-[70vh] w-[100vw] flex flex-col items-center">
+            <div class="flex items-center justify-center text-center h-[10vw] w-[30vw] mt-[4vw]">
                 <div class=""><img class="h-[9vw]" src="./images/skill.gif" alt=""></div>
                 <h1 class="pixelfont text-[3.7vw] pt-[2vw] tracking-wider text-yellow-400">Skills</h1>
             </div>
-            <div class="Skills h-[15vw] w-[100vw]  backdrop-blur-lg mt-[2vw] flex items-center">
-                <div class="flex items-center  gap-[1.5vw] ">
-                    <img class="h-[9vw] w-[9vw]" src="./images/html-removebg-preview.png" alt="">
-                    <img class="h-[9vw] SkillImages w-[9vw]" src="./images/css-removebg-preview.png" alt="">
-                    <img class="h-[9vw] w-[9vw]" src="./images/js-removebg-preview.png" alt="">
-                    <img class="h-[9vw] w-[9vw]" src="./images/figma-removebg-preview.png" alt="">
-                    <img class="h-[9vw] w-[12vw]" src="./images/tailwind-removebg-preview.png" alt="">
-                    <img class="h-[9vw] w-[9vw]" src="./images/shery-removebg-preview.png" alt="">
-                    <img class="h-[9vw] w-[9vw]" src="./images/nodejs-removebg-preview.png" alt="">
-                    <img class="h-[9vw] w-[11vw]" src="./images/express-removebg-preview.png" alt="">
-                    <img class="h-[9vw] w-[10vw]" src="./images/swiper-removebg-preview.png" alt="">
-                    <img class="h-[9vw] w-[10vw]" src="./images/tiltjs-removebg-preview.png" alt="">
-                    <img class="h-[9vw] w-[10vw]" src="./images/scrolltrigger-removebg-preview.png" alt="">
+            <div class="Skills h-[15vw] w-[100vw] bg-black/30 backdrop-blur-lg mt-[2vw] flex items-center overflow-hidden">
+                <div class="flex items-center gap-[1.5vw] animate-move-skills">
+                    <!-- Skill Icons with Hover Effects and Pixelated Glow -->
+                    <img class="h-[9vw] w-[9vw] skill-icon" src="./images/html-removebg-preview.png" alt="">
+                    <img class="h-[9vw] SkillImages w-[9vw] skill-icon" src="./images/css-removebg-preview.png" alt="">
+                    <img class="h-[9vw] w-[9vw] skill-icon" src="./images/js-removebg-preview.png" alt="">
+                    <img class="h-[9vw] w-[9vw] skill-icon" src="./images/figma-removebg-preview.png" alt="">
+                    <img class="h-[9vw] w-[12vw] skill-icon" src="./images/tailwind-removebg-preview.png" alt="">
+                    <img class="h-[9vw] w-[9vw] skill-icon" src="./images/shery-removebg-preview.png" alt="">
+                    <img class="h-[9vw] w-[9vw] skill-icon" src="./images/nodejs-removebg-preview.png" alt="">
+                    <img class="h-[9vw] w-[11vw] skill-icon" src="./images/express-removebg-preview.png" alt="">
+                    <img class="h-[9vw] w-[10vw] skill-icon" src="./images/swiper-removebg-preview.png" alt="">
+                    <img class="h-[9vw] w-[10vw] skill-icon" src="./images/tiltjs-removebg-preview.png" alt="">
+                    <img class="h-[9vw] w-[10vw] skill-icon" src="./images/scrolltrigger-removebg-preview.png" alt="">
+                    <!-- Duplicate the images for infinite effect -->
+                    <img class="h-[9vw] w-[9vw] skill-icon" src="./images/html-removebg-preview.png" alt="">
+                    <img class="h-[9vw] SkillImages w-[9vw] skill-icon" src="./images/css-removebg-preview.png" alt="">
+                    <img class="h-[9vw] w-[9vw] skill-icon" src="./images/js-removebg-preview.png" alt="">
+                    <img class="h-[9vw] w-[9vw] skill-icon" src="./images/figma-removebg-preview.png" alt="">
+                    <img class="h-[9vw] w-[12vw] skill-icon" src="./images/tailwind-removebg-preview.png" alt="">
+                    <img class="h-[9vw] w-[9vw] skill-icon" src="./images/shery-removebg-preview.png" alt="">
+                    <img class="h-[9vw] w-[9vw] skill-icon" src="./images/nodejs-removebg-preview.png" alt="">
+                    <img class="h-[9vw] w-[11vw] skill-icon" src="./images/express-removebg-preview.png" alt="">
+                    <img class="h-[9vw] w-[10vw] skill-icon" src="./images/swiper-removebg-preview.png" alt="">
+                    <img class="h-[9vw] w-[10vw] skill-icon" src="./images/tiltjs-removebg-preview.png" alt="">
+                    <img class="h-[9vw] w-[10vw] skill-icon" src="./images/scrolltrigger-removebg-preview.png" alt="">
                 </div>
             </div>
-        </section>
+        </section> 
         <section class="page5 Projects h-[320vh] w-[100vw]  flex flex-col items-center inline-block">
             <div class="h-[7vw] w-[40vw]  flex items-center justify-center gap-[1vw]">
                 <img class="h-[5vw] rotate-[18deg]" src="./images/sanddial.png" alt="">
