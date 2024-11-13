@@ -54,3 +54,26 @@ function showGameAlert(type, message) {
   document.body.appendChild(alertBox);
   alertBox.style.display = 'block';
 }
+
+
+// JavaScript code for mute/unmute functionality
+function toggleVolume() {
+  const audio = document.getElementById('background-music');
+  const volumeUpIcon = document.getElementById('volume-up');
+  const volumeMuteIcon = document.getElementById('volume-mute');
+
+  // Check if the audio is currently playing sound
+  if (audio.muted) {
+      // Unmute the audio and show the "volume-up" icon
+      audio.muted = false;
+      volumeUpIcon.classList.remove('hidden');
+      volumeMuteIcon.classList.add('hidden');
+  } else {
+      // Mute the audio and show the "volume-mute" icon
+      audio.muted = true;
+      volumeUpIcon.classList.add('hidden');
+      volumeMuteIcon.classList.remove('hidden');
+  }
+}
+
+
