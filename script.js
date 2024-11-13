@@ -1,30 +1,56 @@
-// tailwind.config.js
-module.exports = {
-    theme: {
-      extend: {
-        fontFamily: {
-          joystixMonospace: ['joystix','Monospace'],
-        },
-      },
-    },
+
+(function () {
+  try {
+    emailjs.init("sGsq5EDISOiDizqFT");
+    console.log("EmailJS initialized successfully");
+  } catch (error) {
+    console.error("EmailJS initialization failed", error);
   }
-  
-//   const textWidth = document.querySelector('.SkillImages').scrollWidth;
+})();
 
-//  gsap.to(".SkillImages", {
-//    x: `-${textWidth}px`,
-//    duration: 40,
-//    repeat: -1,
-//    ease: "none",
-//    onRepeat: function() {
-//      gsap.set(this.targets(), { x: window.innerWidth });
-//    }
-//  });
+// Updated sendEmail function to handle EmailJS email sending
+function sendEmail(event) {
+  event.preventDefault();
 
-    
+  const name = document.getElementById('name').value;
+  const mobile = document.getElementById('mobile').value;
+  const email = document.getElementById('email').value;
 
-// gsap.from(".SkillImages",{
-//   y: -100,
-//   duration:2,
-//   delay:2
-// })
+  // Check if all fields are filled
+  if (!name || !mobile || !email) {
+    showGameAlert('error', 'Please fill in all fields.');
+    return;
+  }
+
+  // EmailJS parameters
+  const templateParams = {
+    name: name,
+    mobile: mobile,
+    email: email
+  };
+
+  // Send the email
+  emailjs.send("service_t6iubxi", "template_hxw0ya5", templateParams)
+    .then(function (response) {
+      console.log('SUCCESS!', response.status, response.text);
+      showGameAlert('success', 'Your details have been sent successfully!');
+    })
+    .catch(function (error) {
+      console.error('FAILED...', error);
+      showGameAlert('error', 'Oops, something went wrong! Please try again.');
+    });
+}
+
+// Optional: Gaming-style alert function
+function showGameAlert(type, message) {
+  const alertBox = document.createElement('div');
+  alertBox.className = 'game-alert';
+  alertBox.innerHTML = `
+      <img src='./images/trophy.png' alt='Trophy' class='coin-spin'>
+      <h2>${type === 'success' ? 'MISSION ACCOMPLISHED!' : 'ERROR'}</h2>
+      <p>${message}</p>
+      <button onclick="this.parentElement.style.display='none'" class='bg-yellow-500 text-black pixelfont py-2 px-4 rounded-lg hover:bg-yellow-600 transition duration-300'>CONTINUE</button>
+  `;
+  document.body.appendChild(alertBox);
+  alertBox.style.display = 'block';
+}
