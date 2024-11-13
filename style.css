@@ -75,3 +75,128 @@ width:100%;
   from { transform: rotateY(0deg); }
   to { transform: rotateY(360deg); }
 }
+
+@keyframes moveSkills {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+}
+
+/* Apply the animation to the skill images container */
+.animate-move-skills {
+  animation: moveSkills 30s linear infinite;
+}
+
+ /* Skill Icon styles with pixelated glow and hover effect */
+ .skill-icon {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  filter: drop-shadow(0 0 10px #ffcc00);
+  position: relative;
+  border-radius: 10px;
+}
+
+/* Hover effect: Zoom and glowing outline */
+.skill-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px 5px #ffcc00;
+  cursor: pointer;
+  animation: glowEffect 1.5s infinite alternate;
+}
+
+/* Glow effect animation */
+@keyframes glowEffect {
+  0% {
+      filter: drop-shadow(0 0 10px #ffcc00);
+  }
+  100% {
+      filter: drop-shadow(0 0 30px #ffcc00);
+  }
+}
+
+
+/* General Navbar Styles */
+nav {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid #fff;
+  padding: 1rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  font-family: 'Press Start 2P', cursive; /* Pixel-style font for that retro gaming effect */
+}
+
+/* Part 1: "Design By ANKIT" */
+.part1 {
+  color: #F8C300;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+/* Part 2: Navigation Links */
+.part2 {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.nav-link {
+  cursor: pointer;
+  position: relative;
+  padding: 5px 10px;
+  transition: all 0.3s ease;
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 3px;
+  background-color: #F8C300;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.nav-link:hover::before {
+  transform: scaleX(1);
+}
+
+/* Part 3: Hire Me Button */
+.part3 {
+  padding: 0.75rem 2rem;
+  background-color: transparent;
+  border: 2px solid #F8C300;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.part3:hover {
+  background-color: #F8C300;
+  color: black;
+  box-shadow: 0 0 15px rgba(255, 204, 0, 0.5);
+}
+
+/* Hover Effects for Links */
+.nav-link:hover {
+  color: #F8C300;
+  transition: color 0.3s ease, transform 0.3s ease;
+  transform: scale(1.1);
+}
+
+/* Hover Effects for "HIRE ME" Button */
+.part3:hover h1 {
+  font-size: 1.2rem;
+  transform: scale(1.1);
+}
