@@ -10,16 +10,58 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
 <body class="bgImage bg-[url('./images/bgimage.gif')]  bg-cover bg-center h-screen bg-no-repeat overflow-x-hidden ">
+    <div id="enterPage" class="fixed inset-0 flex items-center justify-center bg-cover bg-center h-screen w-full z-[999999]" style="background-image: url('./images/bgimage.gif');">
+        <img id="cloudsLeft" src="./images/cloud2.png" class="absolute left-0 top-0 h-full object-cover opacity-0 transform -translate-x-full transition-all duration-1000 " style="animation: moveInLeft 1s forwards;">
+        <img id="cloudsRight" src="./images/cloud2.png" class="absolute right-0 top-0 h-full object-cover opacity-0 transform translate-x-full transition-all duration-1000" style="animation: moveInRight 1s forwards;">
+    </div>
+    <style>
+        @keyframes moveInLeft {
+            0% { opacity: 0; transform: translateX(-100%); }
+            100% { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes moveInRight {
+            0% { opacity: 0; transform: translateX(-100%); }
+            100% { opacity: 1; transform: translateX(0); }
+        }
+        #cloudsRight{
+            rotate: 180deg;
+        }
+    </style>
+        <button id="enterButton" class="px-8 py-4 text-2xl font-bold z-[9999999999] text-white bg-yellow-500 rounded-lg shadow-lg hover:bg-yellow-600 transition-all duration-300">
+            ENTER
+        </button>
+    </div>
+
+    <script>
+        document.getElementById('enterButton').addEventListener('click', function() {
+            // Animate clouds coming from the sides
+            const cloudsLeft = document.createElement('img');
+            const cloudsRight = document.createElement('img');
+            cloudsLeft.src = './images/cloud2.png'; // Replace with your cloud image
+            cloudsRight.src = './images/cloud2.png'; // Replace with your cloud image
+            cloudsLeft.className = 'absolute left-0 top-0 h-full object-cover';
+            cloudsRight.className = 'absolute right-0 top-0 h-full object-cover rotate-[180deg]';
+            document.body.appendChild(cloudsLeft);
+            document.body.appendChild(cloudsRight);
+
+            // Hide the enter page after 1 second
+            setTimeout(() => {
+                document.getElementById('enterPage').style.display = 'none';
+                // Show the next section
+                document.querySelector('.main').style.display = 'block'; // Assuming the main section is the one to show
+            }, 1000);
+        });
+    </script>
     <section class="main h-[100vh] w-[100vw] overflow-x-hidden">
-        <nav class="h-[13vh] w-[100vw] bg-black/70 backdrop-blur-sm border-white border-b-2 flex items-center justify-around text-white px-8 py-4">
+        <nav class="nav h-[13vh] w-[100vw] bg-black/70 backdrop-blur-sm border-white border-b-2 flex items-center justify-around text-white px-8 py-4">
             <!-- Part 1: Design by ANKIT -->
-            <div class="part1 text-3xl text-yellow-400 font-bold tracking-widest cursor-pointer flex items-center">
+            <div class="navpart1 text-3xl text-yellow-400 font-bold tracking-widest cursor-pointer flex items-center">
                 <img class="h-[2.5vw]" src="./images/WELCOME-TO (6) new.png" alt="">
                 <img class="h-[6vw] w-[7vw]" src="./images/giphy-unscreen.gif" alt="">
             </div>
         
             <!-- Part 2: Navigation Links -->
-            <div class="part2 flex gap-6 text-xl font-pixel tracking-wide">
+            <div class="navpart2 flex gap-6 text-xl font-pixel tracking-wide">
                 <h1 class="cursor-pointer nav-link"><a href="#projects">PROJECTS</a></h1>
                 <h1>/</h1>
                 <h1 class="cursor-pointer nav-link"><a href="#Achievements">ACHIEVEMENTS</a></h1>
@@ -30,7 +72,7 @@
             </div>
         
             <!-- Part 3: Hire Me Button -->
-            <div class="part3 border-2 border-yellow-500 px-6 py-2 rounded-lg cursor-pointer hover:bg-yellow-500 hover:text-black transform transition-all duration-300">
+            <div class="navpart3 border-2 border-yellow-500 px-6 py-2 rounded-lg cursor-pointer hover:bg-yellow-500 hover:text-black transform transition-all duration-300">
                 <h1 class="font-pixel"><a href="#ContactMe">CONTACT ME</a></h1>
             </div>
         </nav>
@@ -42,13 +84,13 @@
         </div> <!--bg-gradient-to-b from-white to-yellow-800 bg-clip-text text-transparent-->
         <div class="h-[22vw] w-[100vw]  flex items-center justify-between  ">
             <div class="h-[15vw] w-[5vw] mb-[15vw] ml-[4vw]  flex flex-col items-center  text-[3vw] text-white ">
-                <a href="https://github.com/Ankitbillore4"><i
+                <a class="Icons" href="https://github.com/Ankitbillore4"><i
                         class="ri-github-fill hover:text-yellow-400 ease-linear duration-200"></i></a>
-                <a href="https://www.linkedin.com/in/ankit-billore"><i
+                <a class="Icons" href="https://www.linkedin.com/in/ankit-billore"><i
                         class="ri-linkedin-box-fill hover:text-yellow-400 ease-linear duration-200"></i></a>
-                <a href="https://www.instagram.com/pt.billore_ji"><i
+                <a class="Icons" href="https://www.instagram.com/pt.billore_ji"><i
                         class="ri-instagram-line hover:text-yellow-400 ease-linear duration-200"></i></a>
-                <a href="https://youtube.com/@ankitbillore"><i
+                <a class="Icons" href="https://youtube.com/@ankitbillore"><i
                         class="ri-youtube-fill hover:text-yellow-400 ease-linear duration-200"></i></a>
             </div>
             <div class="h-[38vh] w-[40vw]  flex flex-col items-center -mt-[2.5vw]">
