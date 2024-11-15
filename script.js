@@ -77,3 +77,29 @@ function toggleVolume() {
 }
 
 
+// Gsap Applying..............................................
+
+// let tl = gsap.timeline();
+// tl.from(".nav", {
+  //  duration: 1,
+    // opacity: 1,
+    //  y: -100,
+    //  ease: "power1.inOut" 
+  // });
+// 
+  // tl.from(".navpart2", {
+    // duration: 1,
+    //  opacity: 0,
+      // y: -50,
+      // ease: "power1.inOut" 
+  //  });
+// 
+  //  gsap.from(".Icons", {
+    // duration: 1.5,
+    //  opacity: 0,
+      // x: -80,
+      // stagger:0.1,
+      // ease: "power1.inOut" 
+  //  });
+// 
+
