@@ -79,6 +79,38 @@ function toggleVolume() {
   }
 }
 
+// Add sound file location
+const enterSound = new Audio('./audio/mousehover.mp3'); // Replace with your sound file path
+const cloudSound = new Audio('./audio/transition.mp3'); // Replace with your
+
+document.getElementById('enterButton').addEventListener('click', function () {
+    // Play the sound
+    enterSound.play();
+    cloudSound.play(); // Play the sound for cloud transitions
+
+    // Trigger cloud animations
+    const cloudLeft = document.getElementById('cloudLeft');
+    const cloudRight = document.getElementById('cloudRight');
+    cloudLeft.style.animation = "slideInLeft 3.5s forwards";
+    cloudRight.style.animation = "slideInRight 3.5s forwards";
+
+    // Hide the button after it's clicked
+    this.style.display = 'none';
+
+    // Wait for the cloud animation to finish before transitioning
+    setTimeout(() => {
+        // Start fade-out of the clouds
+        document.getElementById('enterPage').classList.add('fade-out');
+
+        // Wait for fade-out animation to finish and hide the "enterPage"
+        setTimeout(() => {
+            document.getElementById('enterPage').style.display = 'none';
+            // Show the main section
+            document.querySelector('.main').classList.remove('hidden');
+        }, 1000); // Wait for fade-out to finish
+    }, 2500); // Wait for cloud animations to complete
+});
+
 
 // Gsap Applying..............................................
 
