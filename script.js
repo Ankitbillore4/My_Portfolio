@@ -15,6 +15,8 @@ function sendEmail(event) {
   const name = document.getElementById('name').value;
   const mobile = document.getElementById('mobile').value;
   const email = document.getElementById('email').value;
+  const message = document.getElementById('message').value;
+
 
   // Check if all fields are filled
   if (!name || !mobile || !email) {
@@ -26,7 +28,8 @@ function sendEmail(event) {
   const templateParams = {
     name: name,
     mobile: mobile,
-    email: email
+    email: email,
+    message :message
   };
 
   // Send the email
