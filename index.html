@@ -12,188 +12,131 @@
 </head>
 <body class="bgImage bg-[url('./images/bgimage.gif')]  bg-cover bg-center h-screen bg-no-repeat overflow-x-hidden ">
 
-
-
-
-
-    <div id="enterPage" class="fixed inset-0 flex flex-col items-center justify-center bg-cover bg-center h-screen w-full  z-[9]" style="background-image: url('./images/lightbg-img.gif');">
-        <!-- Left Cloud -->
-        <img id="cloudLeft" src="./images/cloud2.png" class="absolute left-0 top-0 h-full w-full object-cover opacity-0 transform -translate-x-full transition-all duration-1000">
-        
-        <!-- Right Cloud -->
-        <img id="cloudRight" src="./images/cloud2.png" class="absolute right-0 top-0 h-full w-full object-cover opacity-0 transform translate-x-full transition-all duration-1000 rotate-180">
-        
-        
-        <h1 id="welcomeText" class="text-4xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 animate-pulse tracking-wide mb-8">
-            <img class="h-[10vw]" src="./images/WELCOME-TO (6) new.png" alt="">
-        </h1>
+    <div id="enterPage" 
+    class="fixed inset-0 flex flex-col items-center justify-center bg-cover bg-center h-screen w-full z-[9]" 
+    style="background-image: url('./images/lightbg-img.gif');">
     
-        <!-- Enter Button -->
-        <button id="enterButton" class="px-[10vw] py-1 text-3xl font-extrabold text-white bg-transparant bg-gradient-to-r from-yellow-400 to-orange-600 rounded-lg shadow-lg hover:from-yellow-500 hover:to-orange-700 transition-transform duration-300 transform hover:scale-105 ">
-            ENTER
-        </button>
-    </div>
-    
-    
-    <style>
-        /* Cloud Animations */
-        @keyframes slideInLeft {
-            0% {
-                opacity: 0;
-                transform: translateX(-100%);
-            }
-            50% {
-                opacity: 1;
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(-100%);
-            }
-        }
-    
-        @keyframes slideInRight {
-            0% {
-                opacity: 0;
-                transform: translateX(-100%);
-            }
-            50% {
-                opacity: 1;
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(-100%);
-            }
-        }
-    
-        @keyframes fadeOut {
-            0% {
-                opacity: 1;
-            }
-            100% {
-                opacity: 0;
-            }
-        }    
-        #cloudLeft,
-        #cloudRight {
-            animation-duration: 5s;
-            animation-fill-mode: forwards;
-        }
+    <!-- Left Cloud -->
+    <img id="cloudLeft" src="./images/cloud2.png" 
+        class="absolute left-0 top-0 h-full w-full object-cover opacity-0 transform -translate-x-full transition-all duration-[3000ms]">
 
-        #cloudRight{
-            rotate: 180deg;
-        }
-    
-        #enterPage.fade-out {
-            animation: fadeOut 1s ease forwards;
-        }
-    
-        /* Smooth Button Visibility */
-        #enterButton {
-            z-index: 10;
-        }
-    
-        /* Global Reset */
-        body,
-        html {
-            margin: 0;
-            height: 100%;
-            overflow: hidden; /* Prevent scrolling during animation */
-        }
-    
-        .main {
-            overflow: auto; /* Make sure your main content can scroll */
-        }
-    
-        .main.hidden {
-            display: none;
-        }
+    <!-- Right Cloud -->
+    <img id="cloudRight" src="./images/cloud2.png" 
+        class="absolute right-0 top-0 h-full w-full object-cover opacity-0 transform translate-x-full transition-all duration-[3000ms] rotate-180">
 
-       /* font-family: 'Press Start 2P', cursive;  Gaming-inspired font */
-        
-    /* Button Styling */
-    #enterButton {
-        font-family: 'Press Start 2P', cursive;
-        letter-spacing: 2px;
-        box-shadow: 0px 4px 15px rgba(255, 165, 0, 0.7);
-    }
+    <!-- Welcome Text -->
+    <h1 id="welcomeText" 
+        class="text-4xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 animate-pulse tracking-wide mb-8">
+        <img 
+    class="w-[80vw] sm:w-[60vw] md:w-[40vw] lg:w-[30vw] h-auto mx-auto" 
+    src="./images/WELCOME-TO (6) new.png" 
+    alt="Welcome Text">
 
+    </h1>
 
+    <!-- Enter Button -->
+    <button id="enterButton" 
+        class="px-[10vw] py-2 text-2xl sm:text-3xl font-extrabold text-white bg-transparent bg-gradient-to-r from-yellow-400 to-orange-600 rounded-lg shadow-lg hover:from-yellow-500 hover:to-orange-700 transition-transform duration-300 transform hover:scale-105">
+        ENTER
+    </button>
+</div>
 
-
-    </style>
+    <section class="main h-[100vh] w-[100vw] overflow-x-hidden  ">
+        <nav 
+        class="nav h-[13vh] w-full bg-black/70 backdrop-blur-sm border-white border-b-2 flex items-center justify-around px-4 md:px-8 py-2 md:py-4 text-white relative">
+    
+        <!-- Part 1: Logo Section -->
+        <div 
+        class="navpart1 flex items-center justify-center gap-2 md:gap-4 text-lg md:text-3xl text-yellow-400 font-bold tracking-widest cursor-pointer w-full">
+    
+        <!-- Logo Image 1 -->
+        <img 
+            class="h-10 md:h-[4.5vw] w-auto object-contain" 
+            src="./images/WELCOME-TO (6) new.png" 
+            alt="Logo">
+    
+        <!-- Logo Image 2 (Animated) -->
+        <img 
+            class="h-10 md:h-[6vw] w-auto object-contain" 
+            src="./images/giphy-unscreen.gif" 
+            alt="Animated Logo">
+        </div>
+    
+        <!-- Part 2: Navigation Links (Hidden on mobile and tablet) -->
+        <div 
+            class="navpart2 hidden md:flex gap-4 lg:gap-6 text-sm md:text-xl font-pixel tracking-wide items-center">
+            <h1 class="cursor-pointer nav-link"><a href="#projects">PROJECTS</a></h1>
+            <h1>/</h1>
+            <h1 class="cursor-pointer nav-link"><a href="#Achievements">ACHIEVEMENTS</a></h1>
+            <h1>/</h1>
+            <h1 class="cursor-pointer nav-link"><a href="#footer">PRICES</a></h1>
+            <h1>/</h1>
+            <h1 class="cursor-pointer nav-link"><a href="#AboutMe">ABOUT ME</a></h1>
+        </div>
+    
+        <!-- Part 3: Hire Me Button (Hidden on mobile and tablet) -->
+        <div 
+            class="navpart3 border-2 border-yellow-500 px-4 md:px-6 py-1 md:py-2 rounded-lg cursor-pointer hover:bg-yellow-500 hover:text-black transform transition-all duration-300 hidden md:block text-center">
+            <h1 class="font-pixel"><a href="#ContactMe">CONTACT ME</a></h1>
+        </div>
+    
+        <!-- Hamburger Menu for Mobile and Tablet (Shows on mobile and tablet) -->
+        <div class="md:hidden flex items-center z-20">
+            <button id="hamburgerButton" class="text-white text-3xl">
+                <i class="fas fa-bars"></i> <!-- Bars icon -->
+            </button>
+        </div>
+    
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" 
+            class="absolute top-0 left-0 w-full h-screen bg-black/80 backdrop-blur-sm flex flex-col items-center justify-center gap-6 text-xl font-pixel text-white opacity-0 transform -translate-y-full transition-all duration-500">
+            <a href="#projects" class="cursor-pointer nav-link">PROJECTS</a>
+            <a href="#Achievements" class="cursor-pointer nav-link">ACHIEVEMENTS</a>
+            <a href="#footer" class="cursor-pointer nav-link">PRICES</a>
+            <a href="#AboutMe" class="cursor-pointer nav-link">ABOUT ME</a>
+            <a href="#ContactMe" class="cursor-pointer nav-link border-2 border-yellow-500 px-6 py-2 rounded-lg hover:bg-yellow-500 hover:text-black transform transition-all duration-300">CONTACT ME</a>
+        </div>
+    
+        <!-- Close (Cut) Button (Hidden on mobile, appears when the menu is open) -->
+        <div id="closeButton" class="absolute top-4 right-4 z-30 text-3xl text-white opacity-0">
+            <i class="fas fa-times"></i> <!-- Cross icon -->
+        </div>
+    </nav>
+    
+    <!-- Add Font Awesome for Hamburger and Cross Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     
     <script>
-        // Add sound file location
-        const enterSound = new Audio('./audio/mousehover.mp3'); // Replace with your sound file path
-        const cloudSound = new Audio('./audio/transition.mp3'); // Replace with your
+        // JavaScript for Hamburger Menu Toggle
+        const hamburgerButton = document.getElementById('hamburgerButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const closeButton = document.getElementById('closeButton');
     
-        document.getElementById('enterButton').addEventListener('click', function () {
-            // Play the sound
-            enterSound.play();
-            cloudSound.play(); // Play the sound for cloud transitions
+        // When hamburger button is clicked, show the mobile menu and hide the hamburger icon
+        hamburgerButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('opacity-0', '-translate-y-full');
+            mobileMenu.classList.add('opacity-100', 'translate-y-0');
+            closeButton.classList.remove('opacity-0');
+            closeButton.classList.add('opacity-100');
+            hamburgerButton.classList.add('opacity-0');
+        });
     
-            // Trigger cloud animations
-            const cloudLeft = document.getElementById('cloudLeft');
-            const cloudRight = document.getElementById('cloudRight');
-            cloudLeft.style.animation = "slideInLeft 3.5s forwards";
-            cloudRight.style.animation = "slideInRight 3.5s forwards";
-    
-            // Hide the button after it's clicked
-            this.style.display = 'none';
-    
-            // Wait for the cloud animation to finish before transitioning
-            setTimeout(() => {
-                // Start fade-out of the clouds
-                document.getElementById('enterPage').classList.add('fade-out');
-    
-                // Wait for fade-out animation to finish and hide the "enterPage"
-                setTimeout(() => {
-                    document.getElementById('enterPage').style.display = 'none';
-                    // Show the main section
-                    document.querySelector('.main').classList.remove('hidden');
-                }, 1000); // Wait for fade-out to finish
-            }, 2500); // Wait for cloud animations to complete
+        // When close button is clicked, hide the mobile menu and show the hamburger icon
+        closeButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('opacity-100', 'translate-y-0');
+            mobileMenu.classList.add('opacity-0', '-translate-y-full');
+            closeButton.classList.remove('opacity-100');
+            closeButton.classList.add('opacity-0');
+            hamburgerButton.classList.remove('opacity-0');
         });
     </script>
     
 
-
-   
-   
-
-
-    <section class="main h-[100vh] w-[100vw] overflow-x-hidden  ">
-        <nav class="nav h-[13vh] w-[100vw] bg-black/70 backdrop-blur-sm border-white border-b-2 flex items-center justify-around text-white px-8 py-4">
-            <!-- Part 1: Design by ANKIT -->
-            <div class="navpart1 text-3xl text-yellow-400 font-bold tracking-widest cursor-pointer flex items-center">
-                <img class="h-[2.5vw]" src="./images/WELCOME-TO (6) new.png" alt="">
-                <img class="h-[6vw] w-[7vw]" src="./images/giphy-unscreen.gif" alt="">
-            </div>
         
-            <!-- Part 2: Navigation Links -->
-            <div class="navpart2 flex gap-6 text-xl font-pixel tracking-wide">
-                <h1 class="cursor-pointer nav-link"><a href="#projects">PROJECTS</a></h1>
-                <h1>/</h1>
-                <h1 class="cursor-pointer nav-link"><a href="#Achievements">ACHIEVEMENTS</a></h1>
-                <h1>/</h1>
-                <h1 class="cursor-pointer nav-link"><a href="#footer">PRICES</a></h1>
-                <h1>/</h1>
-                <h1 class="cursor-pointer nav-link"><a href="#AboutMe">ABOUT ME</a></h1>
-            </div>
-        
-            <!-- Part 3: Hire Me Button -->
-            <div class="navpart3 border-2 border-yellow-500 px-6 py-2 rounded-lg cursor-pointer hover:bg-yellow-500 hover:text-black transform transition-all duration-300">
-                <h1 class="font-pixel"><a href="#ContactMe">CONTACT ME</a></h1>
-            </div>
-        </nav>
-        
-        <!-- <nav class="fakenav hidden h-[13vh] w-[100vw] bg-black/30 backdrop-blur-sm border-white border-b-2 flex items-center justify-around text-white"></nav> -->
-        <div class="flex justify-center mt-[4vw]"><img class="h-[10vw]" src="./images/WELCOME-TO (6) new.png"></div>
-        <div class="text-center pixelfont -mt-[3.5vw]">
-            <h1 class="text-[6vw] text-[#FEF9F2]"><b>My Portfolio</b></h1>
-        </div> <!--bg-gradient-to-b from-white to-yellow-800 bg-clip-text text-transparent-->
-        <div class="h-[22vw] w-[100vw]  flex items-center justify-between  ">
-            <div class="h-[15vw] w-[5vw] mb-[15vw] ml-[4vw]  flex flex-col items-center  text-[3vw] text-white ">
+
+       <section id="FirstPage" class="h-[40vw] w-[100vw] bg-red-400 flex items-center justify-center">
+           <div class="h-[100%] w-[15%] bg-yellow-800 flex items-center justify-center">
+            <div class="h-[20vw] w-[5vw]  ml-[4vw] bg-green-500  flex flex-col items-center  text-[3vw] text-white ">
                 <a class="Icons" href="https://github.com/Ankitbillore4"><i
                         class="ri-github-fill hover:text-yellow-400 ease-linear duration-200"></i></a>
                 <a class="Icons" href="https://www.linkedin.com/in/ankit-billore"><i
@@ -203,34 +146,65 @@
                 <a class="Icons" href="https://youtube.com/@ankitbillore"><i
                         class="ri-youtube-fill hover:text-yellow-400 ease-linear duration-200"></i></a>
             </div>
-            <div class="h-[38vh] w-[40vw]  flex flex-col items-center -mt-[2.5vw]">
-                <div class=""><img class="h-[5.5vw]" src="./images/running.gif" alt=""></div>
-                <div
-                    class="border-2 border-yellow-400 rounded-lg h-[3vw] w-[20vw] flex items-center justify-center cursor-pointer backdrop-blur-sm ">
-                    <h1 class="text-[1.5vw] pixelfont"><b><span class="text-yellow-400"><a href="./MyResume.pdf"
-                                    download="">Download</a></span> <span class="text-white">My</span> <span
-                                class="text-yellow-400">CV</span></b></h1>
-                </div>
-                <!-- <div class="mt-[1vw]  ">
-                    <img class="h-[12vw] w-[40vw]" src="./images/running-3-ideiot-unscreen.gif" alt="">
-                </div> -->
-            </div>
-            <div class="h-[40vh]  mr-[3vw] flex flex-col items-center ">
-                <h1 class="rotate-[90deg] pixelfont text-[1vw] cursor-grabbing text-white">Scroll Down <i
-                        class="ri-arrow-right-line "></i></h1>
-            </div>
-                    <!-- Volume Button -->
-            <div class="volume h-[4vw] w-[4vw] rounded-[50%] bg-yellow-500 absolute bottom-[3vw] right-[4vw] z-[999999] cursor-pointer flex items-center justify-center hover:bg-white ease-linear duration-200" onclick="toggleVolume()">
-                <i id="volume-up" class="ri-volume-up-fill text-[2vw]"></i>
-                <i id="volume-mute" class="ri-volume-mute-fill text-[2vw] hidden"></i>
-            </div>
 
-            <!-- Audio Element -->
-            <audio id="background-music" autoplay loop>
-                <source src="./audio/bgm.wav" type="audio/mp3">
-            </audio>
+           </div>
+           <div class="h-[100%] w-[70%] bg-green-500 flex flex-col items-center justify-center">
+                <div class="welcomedive flex justify-center bg-yellow-300"><img class="h-[10vw]" src="./images/WELCOME-TO (6) new.png"></div>
+                <div class="Myportfolio text-center pixelfont  bg-green-200">
+                    <h1 class="text-[6vw] text-[#FEF9F2]"><b>My Portfolio</b></h1>
+                </div>
+                <div class="h-[30vh] w-[22vw]  flex flex-col items-center  bg-pink-400">
+                    <div class=""><img class="h-[5.5vw]" src="./images/running.gif" alt=""></div>
+                    <a href="./MyResume.pdf">
+                        <div
+                        class="border-2 border-yellow-400 rounded-lg h-[3vw] w-[20vw] flex items-center justify-center cursor-pointer backdrop-blur-sm ">
+                        <h1 class="text-[1.5vw] pixelfont"><b><span class="text-yellow-400" download="">Download</span> <span class="text-white">My</span> <span
+                                    class="text-yellow-400">CV</span></b></h1>
+                    </div>
+                    </a>
+                    
+                </div>
+           </div> 
+
+           <div class="h-[100%] w-[15%] bg-yellow-200 flex items-center justify-center">
+            <h1 class="pixelfont text-[1vw] cursor-grabbing text-white animate-scroll-down">
+                Scroll Down <i class="ri-arrow-right-line"></i>
+            </h1>
+            
+            <style>
+                /* Keyframe animation for the Scroll Down text */
+                @keyframes scrollDownAnimation {
+                    0% {
+                        transform: translateX(0);
+                    }
+                    50% {
+                        transform: translateX(10px); /* Move the text down */
+                    }
+                    100% {
+                        transform: translateX(0); /* Return to original position */
+                    }
+                }
+            
+                /* Apply the animation to the text */
+                .animate-scroll-down {
+                    animation: scrollDownAnimation 1s ease-in-out infinite;
+                    rotate: 90deg;
+                }
+            </style>
+            
+           </div>
+                <!-- Volume Button -->
+        <div class="volume sm:h-[4vw] h-[14vw] sm:w-[4vw] w-[14vw] rounded-[50%] bg-yellow-500 absolute bottom-[3vw] right-[4vw] z-[999999] cursor-pointer flex items-center justify-center hover:bg-white ease-linear duration-200" onclick="toggleVolume()">
+            <i id="volume-up" class="ri-volume-up-fill sm:text-[2vw] text-[10vw]"></i>
+            <i id="volume-mute" class="ri-volume-mute-fill sm:text-[2vw] text-[10vw] hidden"></i>
         </div>
-        <section id="Achievements" class="page2 h-[89vh] w-[100vw]  flex flex-col items-center ">
+        <!-- Audio Element -->
+        <audio id="background-music" autoplay loop>
+            <source src="./audio/bgm.wav" type="audio/mp3">
+        </audio>
+   
+       </section>
+        <section id="Achievements" class="page2 h-[79vh] w-[100vw] bg-green-200 flex flex-col items-center justify-center">
             <div class="h-[20vh] w-[60vw]  -mt-[3vw] ">
                 <div class="flex items-center justify-center pt-[2vw]">
                     <img class="h-[5vw]" src="./images/trophy.png" alt="">
@@ -259,7 +233,7 @@
             </div>
 
         </section>
-        <section id="AboutMe" class="page3 h-[95vh] w-[100vw]  flex flex-col items-center text-white">
+        <section id="AboutMe" class="page3 h-[95vh] w-[100vw] bg-yellow-300 flex flex-col items-center justify-center text-white">
             <div class="h-[17vh] w-[35vw]  flex items-center justify-center">
                 <img class="h-[9vw]" src="./images/giphy.gif" alt="">
                 <h1 class="pixelfont text-[3vw] text-yellow-500">About Me</h1>
@@ -300,7 +274,7 @@
                 </div>
             </div>
         </section>
-        <section id="Skills" class="page4 h-[70vh] w-[100vw] flex flex-col items-center">
+        <section id="Skills" class="page4 h-[70vh] w-[100vw] bg-pink-400 flex flex-col items-center justify-center">
             <div class="flex items-center justify-center text-center h-[10vw] w-[30vw] mt-[4vw]">
                 <div class=""><img class="h-[9vw]" src="./images/skill.gif" alt=""></div>
                 <h1 class="pixelfont text-[3.7vw] pt-[2vw] tracking-wider text-yellow-400">Skills</h1>
@@ -334,7 +308,7 @@
                 </div>
             </div>
         </section> 
-        <section id="projects" class="page5 Projects h-[320vh] w-[100vw]  flex flex-col items-center inline-block">
+        <section id="projects" class="page5 Projects h-[320vh] bg-orange-300 w-[100vw]  flex flex-col items-center justify-center inline-block">
             <div class="h-[7vw] w-[40vw]  flex items-center justify-center gap-[1vw]">
                 <img class="h-[5vw] rotate-[18deg]" src="./images/sanddial.png" alt="">
                 <h1 class=" text-[4vw] pixelfont text-yellow-500">Projects</h1>
@@ -519,7 +493,7 @@
                 </div>
             </div>
         </section>
-        <section id="ContactMe" class="page6 userdetails h-[100vh] w-[100vw] flex flex-col items-center inline-block">
+        <section id="ContactMe" class="page6 userdetails h-[100vh] bg-blue-200 w-[100vw] flex flex-col items-center justify-center inline-block">
             <div class="h-full w-full flex items-center justify-center bg-black/30 backdrop-blur-sm" id="contactForm">
                 <div class="w-[40vw] p-8 rounded-lg border-2 border-yellow-500 bg-black/50">
                     <h2 class="text-center text-3xl mb-8 pixelfont text-yellow-500">Contact Me</h2>
