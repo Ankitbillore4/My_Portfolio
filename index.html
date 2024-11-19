@@ -39,7 +39,7 @@
         class="px-[10vw] py-2 text-2xl sm:text-3xl font-extrabold text-white bg-transparent bg-gradient-to-r from-yellow-400 to-orange-600 rounded-lg shadow-lg hover:from-yellow-500 hover:to-orange-700 transition-transform duration-300 transform hover:scale-105">
         ENTER
     </button>
-</div>
+    </div>
 
     <section class="main h-[100vh] w-[100vw] overflow-x-hidden  ">
         <nav 
@@ -81,15 +81,15 @@
         </div>
     
         <!-- Hamburger Menu for Mobile and Tablet (Shows on mobile and tablet) -->
-        <div class="md:hidden flex items-center z-20">
-            <button id="hamburgerButton" class="text-white text-3xl">
+        <div id="hamburgerButton" class="md:hidden flex items-center bg-red-400">
+            <button class="text-white text-3xl ">
                 <i class="fas fa-bars"></i> <!-- Bars icon -->
             </button>
         </div>
     
         <!-- Mobile Menu -->
         <div id="mobileMenu" 
-            class="absolute top-0 left-0 w-full h-screen bg-black/80 backdrop-blur-sm flex flex-col items-center justify-center gap-6 text-xl font-pixel text-white opacity-0 transform -translate-y-full transition-all duration-500">
+            class="absolute top-0 left-0 w-full h-screen bg-black/80 backdrop-blur-sm flex flex-col items-center justify-center gap-6 text-xl font-pixel text-white opacity-0 transform -translate-y-full transition-all duration-500 z-9999">
             <a href="#projects" class="cursor-pointer nav-link">PROJECTS</a>
             <a href="#Achievements" class="cursor-pointer nav-link">ACHIEVEMENTS</a>
             <a href="#footer" class="cursor-pointer nav-link">PRICES</a>
@@ -98,7 +98,7 @@
         </div>
     
         <!-- Close (Cut) Button (Hidden on mobile, appears when the menu is open) -->
-        <div id="closeButton" class="absolute top-4 right-4 z-30 text-3xl text-white opacity-0">
+        <div id="closeButton" class="absolute top-4 right-4 z-30 text-3xl text-white opacity-0 bg-blue-200">
             <i class="fas fa-times"></i> <!-- Cross icon -->
         </div>
     </nav>
@@ -204,14 +204,14 @@
         </audio>
    
        </section>
-        <section id="Achievements" class="page2 h-[79vh] w-[100vw] bg-green-200 flex flex-col items-center justify-center">
-            <div class="h-[20vh] w-[60vw]  -mt-[3vw] ">
+        <section id="Achievements" class="page2 h-[35vw] w-[100vw] bg-green-200 flex flex-col items-center justify-center">
+            <div class="h-[20vh] w-[60vw]">
                 <div class="flex items-center justify-center pt-[2vw]">
                     <img class="h-[5vw]" src="./images/trophy.png" alt="">
                     <h1 class="pixelfont text-[4vw] tracking-wider pl-[2vw] text-yellow-400">Achivement</h1>
                 </div>
             </div>
-            <div class="h-[30vh] w-[100vw]  backdrop-blur-lg  mt-[3vw] flex items-center justify-evenly pixelfont">
+            <div class="h-[30vw] w-[100vw]  backdrop-blur-lg  mt-[3vw] flex items-center justify-evenly pixelfont">
                 <div
                     class="h-[5vw] w-[22vw] rounded-lg bg-black/30 backdrop-blur-sm  flex items-center justify-center border-2 border-yellow-600">
                     <h1 class="text-[1.5vw] text-white"><span class="text-yellow-500">25+</span> Projects</h1>
@@ -233,7 +233,7 @@
             </div>
 
         </section>
-        <section id="AboutMe" class="page3 h-[95vh] w-[100vw] bg-yellow-300 flex flex-col items-center justify-center text-white">
+        <section id="AboutMe" class="page3 h-[60vw] w-[100vw] bg-yellow-300 flex flex-col items-center justify-center text-white">
             <div class="h-[17vh] w-[35vw]  flex items-center justify-center">
                 <img class="h-[9vw]" src="./images/giphy.gif" alt="">
                 <h1 class="pixelfont text-[3vw] text-yellow-500">About Me</h1>
@@ -274,7 +274,7 @@
                 </div>
             </div>
         </section>
-        <section id="Skills" class="page4 h-[70vh] w-[100vw] bg-pink-400 flex flex-col items-center justify-center">
+        <section id="Skills" class="page4 h-[35vw] w-[100vw] bg-pink-400 flex flex-col items-center justify-center">
             <div class="flex items-center justify-center text-center h-[10vw] w-[30vw] mt-[4vw]">
                 <div class=""><img class="h-[9vw]" src="./images/skill.gif" alt=""></div>
                 <h1 class="pixelfont text-[3.7vw] pt-[2vw] tracking-wider text-yellow-400">Skills</h1>
@@ -308,7 +308,7 @@
                 </div>
             </div>
         </section> 
-        <section id="projects" class="page5 Projects h-[320vh] bg-orange-300 w-[100vw]  flex flex-col items-center justify-center inline-block">
+        <section id="projects" class="page5 Projects h-[160vw] bg-orange-300 w-[100vw]  flex flex-col items-center justify-center inline-block">
             <div class="h-[7vw] w-[40vw]  flex items-center justify-center gap-[1vw]">
                 <img class="h-[5vw] rotate-[18deg]" src="./images/sanddial.png" alt="">
                 <h1 class=" text-[4vw] pixelfont text-yellow-500">Projects</h1>
@@ -493,7 +493,7 @@
                 </div>
             </div>
         </section>
-        <section id="ContactMe" class="page6 userdetails h-[100vh] bg-blue-200 w-[100vw] flex flex-col items-center justify-center inline-block">
+        <section id="ContactMe" class="page6 userdetails h-[50vw] bg-blue-200 w-[100vw] flex flex-col items-center justify-center inline-block">
             <div class="h-full w-full flex items-center justify-center bg-black/30 backdrop-blur-sm" id="contactForm">
                 <div class="w-[40vw] p-8 rounded-lg border-2 border-yellow-500 bg-black/50">
                     <h2 class="text-center text-3xl mb-8 pixelfont text-yellow-500">Contact Me</h2>
@@ -536,7 +536,7 @@
             </div>
         </section>
         
-      <section id="footer" class="page7 footer h-[70vh] w-[100vw] bg-red-300  ">
+      <section id="footer" class="page7 footer h-[40vw] w-[100vw] bg-red-300  ">
         <footer class="w-full bg-gradient-to-b from-black via-gray-900 to-black border-t-2 border-yellow-500 px-8 py-12 text-center text-white pixelfont">
             <div class="flex flex-col items-center space-y-6">
                 
