@@ -43,7 +43,7 @@
 
     <section class="main h-[100vh] w-[100vw] overflow-x-hidden  ">
         <nav 
-        class="nav h-[13vh] w-full bg-black  backdrop-blur-sm border-white border-b-2 flex items-center justify-center  md:px-8 py-2 md:py-4 text-white relative">
+        class="nav md:h-[13vh] md:w-full bg-black/70  backdrop-blur-sm border-white border-b-2 flex items-center justify-between  md:px-8 py-2 md:py-4 text-white relative">
     
         <!-- Part 1: Logo Section -->
         <div 
@@ -51,13 +51,13 @@
     
         <!-- Logo Image 1 -->
         <img 
-            class="h-10 md:h-[4.5vw] w-auto object-contain bg-green-400" 
+            class="h-[15vw] w-[60vw] md:h-[4.5vw] md:w-auto md:ml-[0vw] -ml-[11vw] object-contain bg-green-400" 
             src="./images/WELCOME-TO (6) new.png" 
             alt="Logo">
     
         <!-- Logo Image 2 (Animated) -->
         <img 
-            class="h-10 md:h-[6vw] w-auto object-contain bg-red-400" 
+            class="h-[15vw]  md:h-[6vw] md:w-auto object-contain bg-red-400" 
             src="./images/giphy-unscreen.gif" 
             alt="Animated Logo">
         </div>
@@ -76,13 +76,13 @@
     
         <!-- Part 3: Hire Me Button (Hidden on mobile and tablet) -->
         <div 
-            class="navpart3 bg-pink-400 border-2 border-yellow-500  md:px-6 py-1 md:py-2 rounded-lg cursor-pointer hover:bg-yellow-500 hover:text-black transform transition-all duration-300 hidden md:block ">
-            <h1 class="font-pixel"><a href="#ContactMe">CONTACT ME</a></h1>
+            class="navpart3 bg-pink-400 border-2 border-yellow-500 md:py-2 rounded-lg cursor-pointer hover:bg-yellow-500 hover:text-black transform transition-all duration-300 hidden md:block ">
+            <h1 class="font-pixel"><a href="#ContactMe">CONTACTME</a></h1>
         </div>
     
         <!-- Hamburger Menu for Mobile and Tablet (Shows on mobile and tablet) -->
-        <div id="hamburgerButton" class="md:hidden flex items-center bg-red-400">
-            <button class="text-white text-3xl ">
+        <div id="hamburgerButton" class="md:hidden flex items-center md:h-[0] h-[13vw] md:w-[0] w-[12vw] -mr-[8vw] bg-red-400 flex items-center justify-center">
+            <button class="text-white text-4xl ">
                 <i class="fas fa-bars"></i> <!-- Bars icon -->
             </button>
         </div>
@@ -134,9 +134,9 @@
 
         
 
-       <section id="FirstPage" class="h-[40vw] w-[100vw] bg-red-400 flex items-center justify-center">
+       <section id="FirstPage" class="sm:h-[40vw] h-[95vh] sm:w-[100vw] bg-red-400 flex items-center justify-center">
            <div class="h-[100%] w-[15%] bg-yellow-800 flex items-center justify-center">
-            <div class="h-[20vw] w-[5vw]  ml-[4vw] bg-green-500  flex flex-col items-center  text-[3vw] text-white ">
+            <div class="sm:h-[20vw] h-[30vh]  sm:w-[5vw] w-[12] sm:ml-[4vw] bg-green-500  flex flex-col items-center  sm:text-[3vw] text-[5vh] text-white ">
                 <a class="Icons" href="https://github.com/Ankitbillore4"><i
                         class="ri-github-fill hover:text-yellow-400 ease-linear duration-200"></i></a>
                 <a class="Icons" href="https://www.linkedin.com/in/ankit-billore"><i
@@ -149,16 +149,16 @@
 
            </div>
            <div class="h-[100%] w-[70%] bg-green-500 flex flex-col items-center justify-center">
-                <div class="welcomedive flex justify-center bg-yellow-300"><img class="h-[10vw]" src="./images/WELCOME-TO (6) new.png"></div>
+                <div class="welcomedive flex justify-center bg-yellow-300"><img class="sm:h-[10vw] h-[12vh]" src="./images/WELCOME-TO (6) new.png"></div>
                 <div class="Myportfolio text-center pixelfont  bg-green-200">
-                    <h1 class="text-[6vw] text-[#FEF9F2]"><b>My Portfolio</b></h1>
+                    <h1 class="sm:text-[5vw] text-[3.4vh] text-[#FEF9F2]"><b>My Portfolio</b></h1>
                 </div>
-                <div class="h-[30vh] w-[22vw]  flex flex-col items-center  bg-pink-400">
-                    <div class=""><img class="h-[5.5vw]" src="./images/running.gif" alt=""></div>
+                <div class="sm:h-[30vh] h-[12vh] w-[40vw] sm:w-[22vw]  flex flex-col items-center  bg-pink-400">
+                    <div class=""><img class="sm:h-[5.5vw] h-[10vh]" src="./images/running.gif" alt=""></div>
                     <a href="./MyResume.pdf">
                         <div
-                        class="border-2 border-yellow-400 rounded-lg h-[3vw] w-[20vw] flex items-center justify-center cursor-pointer backdrop-blur-sm ">
-                        <h1 class="text-[1.5vw] pixelfont"><b><span class="text-yellow-400" download="">Download</span> <span class="text-white">My</span> <span
+                        class="border-2 border-yellow-400 rounded-lg sm:h-[5vw] h-[5.5vh] sm:w-[25vw] w-[64vw] flex items-center justify-center cursor-pointer backdrop-blur-sm ">
+                        <h1 class="sm:text-[1.5vw] text-[4vw]  pixelfont"><b><span class="text-yellow-400" download="">Download</span> <span class="text-white">My</span> <span
                                     class="text-yellow-400">CV</span></b></h1>
                     </div>
                     </a>
@@ -166,8 +166,8 @@
                 </div>
            </div> 
 
-           <div class="h-[100%] w-[15%] bg-yellow-200 flex items-center justify-center">
-            <h1 class="pixelfont text-[1vw] cursor-grabbing text-white animate-scroll-down">
+           <div class="h-[100%] w-[15%] flex-wrap bg-yellow-200 flex items-center justify-center">
+            <h1 class=" sm:text-[1vw] text-[2vw] bg-red-300 cursor-grabbing text-white animate-scroll-down">
                 Scroll Down <i class="ri-arrow-right-line"></i>
             </h1>
             
@@ -204,7 +204,7 @@
         </audio>
    
        </section>
-        <section id="Achievements" class="page2 h-[35vw] w-[100vw] bg-green-200 flex flex-col items-center justify-center">
+        <section id="Achievements" class="page2 hidden h-[35vw] w-[100vw] bg-green-200 flex flex-col items-center justify-center">
             <div class="h-[20vh] w-[60vw]">
                 <div class="flex items-center justify-center pt-[2vw]">
                     <img class="h-[5vw]" src="./images/trophy.png" alt="">
@@ -233,7 +233,7 @@
             </div>
 
         </section>
-        <section id="AboutMe" class="page3 h-[60vw] w-[100vw] bg-yellow-300 flex flex-col items-center justify-center text-white">
+        <section id="AboutMe" class="page3 h-[60vw] hidden w-[100vw] bg-yellow-300 flex flex-col items-center justify-center text-white">
             <div class="h-[17vh] w-[35vw]  flex items-center justify-center">
                 <img class="h-[9vw]" src="./images/giphy.gif" alt="">
                 <h1 class="pixelfont text-[3vw] text-yellow-500">About Me</h1>
@@ -274,7 +274,7 @@
                 </div>
             </div>
         </section>
-        <section id="Skills" class="page4 h-[35vw] w-[100vw] bg-pink-400 flex flex-col items-center justify-center">
+        <section id="Skills" class="page4 h-[35vw] hidden w-[100vw] bg-pink-400 flex flex-col items-center justify-center">
             <div class="flex items-center justify-center text-center h-[10vw] w-[30vw] mt-[4vw]">
                 <div class=""><img class="h-[9vw]" src="./images/skill.gif" alt=""></div>
                 <h1 class="pixelfont text-[3.7vw] pt-[2vw] tracking-wider text-yellow-400">Skills</h1>
@@ -308,7 +308,7 @@
                 </div>
             </div>
         </section> 
-        <section id="projects" class="page5 Projects h-[160vw] bg-orange-300 w-[100vw]  flex flex-col items-center justify-center inline-block">
+        <section id="projects" class="page5 Projects hidden h-[160vw] bg-orange-300 w-[100vw]  flex flex-col items-center justify-center inline-block">
             <div class="h-[7vw] w-[40vw]  flex items-center justify-center gap-[1vw]">
                 <img class="h-[5vw] rotate-[18deg]" src="./images/sanddial.png" alt="">
                 <h1 class=" text-[4vw] pixelfont text-yellow-500">Projects</h1>
@@ -493,7 +493,7 @@
                 </div>
             </div>
         </section>
-        <section id="ContactMe" class="page6 userdetails h-[50vw] bg-blue-200 w-[100vw] flex flex-col items-center justify-center inline-block">
+        <section id="ContactMe" class="page6 userdetails hidden h-[50vw] bg-blue-200 w-[100vw] flex flex-col items-center justify-center inline-block">
             <div class="h-full w-full flex items-center justify-center bg-black/30 backdrop-blur-sm" id="contactForm">
                 <div class="w-[40vw] p-8 rounded-lg border-2 border-yellow-500 bg-black/50">
                     <h2 class="text-center text-3xl mb-8 pixelfont text-yellow-500">Contact Me</h2>
@@ -536,7 +536,7 @@
             </div>
         </section>
         
-      <section id="footer" class="page7 footer h-[40vw] w-[100vw] bg-red-300  ">
+      <section id="footer" class="page7 footer h-[40vw] hidden w-[100vw] bg-red-300  ">
         <footer class="w-full bg-gradient-to-b from-black via-gray-900 to-black border-t-2 border-yellow-500 px-8 py-12 text-center text-white pixelfont">
             <div class="flex flex-col items-center space-y-6">
                 
