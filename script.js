@@ -109,7 +109,7 @@ document.getElementById('enterButton').addEventListener('click', function () {
             document.querySelector('.main').classList.remove('hidden');
         }, 1000); // Wait for fade-out to finish
     }, 2500); // Wait for cloud animations to complete
-});
+}); 
 
 
 // Gsap Applying..............................................
