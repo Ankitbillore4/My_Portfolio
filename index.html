@@ -193,15 +193,24 @@
             </style>
             
            </div>
-                <!-- Volume Button -->
-        <div class="volume sm:h-[4vw] h-[14vw] sm:w-[4vw] w-[14vw] rounded-[50%] bg-yellow-500 absolute bottom-[3vw] right-[4vw] z-[999999] cursor-pointer flex items-center justify-center hover:bg-white ease-linear duration-200" onclick="toggleVolume()">
-            <i id="volume-up" class="ri-volume-up-fill sm:text-[2vw] text-[10vw]"></i>
-            <i id="volume-mute" class="ri-volume-mute-fill sm:text-[2vw] text-[10vw] hidden"></i>
-        </div>
-        <!-- Audio Element -->
-        <audio id="background-music" autoplay loop>
-            <source src="./audio/bgm.wav" type="audio/mp3">
-        </audio>
+           <!-- Volume Button -->
+           <div  class="volume sm:h-[4vw] h-[14vw] sm:w-[4vw] w-[14vw] rounded-[50%] bg-yellow-500 absolute bottom-[3vw] right-[4vw] z-[999999] cursor-pointer flex items-center justify-center hover:bg-white ease-linear duration-200" onclick="toggleVolume()">
+               <i id="volume-up" class="ri-volume-up-fill sm:text-[2vw] text-[10vw]"></i>
+               <i id="volume-mute" class="ri-volume-mute-fill sm:text-[2vw] text-[10vw] hidden"></i>
+            </div> 
+            <audio id="background-music" loop>
+                <source src="./audio/bgm.wav" type="audio/mp3">
+            </audio>
+            
+            <button onclick="playMusic()" class="bg-black/40  text-white px-2 py-1 rounded fixed absolute sm:bottom-[8vw] bottom-[10vh] sm:text-[1vw] text-[2.5vw]  right-[2vw] z-[8]">play music</button>
+        
+            <script>
+                function playMusic() {
+                    const music = document.getElementById('background-music');
+                    music.play();
+                }
+            </script>
+            
    
        </section>
        <section id="Achievements" class="page2 h-auto w-full  flex flex-col items-center justify-center px-4 sm:px-8  sm:mt-[5vw] mt-0">
