@@ -111,7 +111,7 @@ document.getElementById('enterButton').addEventListener('click', function () {
     }, 2500); // Wait for cloud animations to complete
 }); 
 
-
+   
 // Gsap Applying..............................................
 
 // let tl = gsap.timeline();
