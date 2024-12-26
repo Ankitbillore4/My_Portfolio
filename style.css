@@ -1,22 +1,23 @@
-*{
-  margin:0%;
-  padding:0%;
+* {
+  margin: 0%;
+  padding: 0%;
   box-sizing: border-box;
   font-family: 'Press Start 2P', cursive;
 }
 
-html,body{
-height:100%;
-width:100%; 
+html,
+body {
+  height: 100%;
+  width: 100%;
 }
 
 
-.pixelfont{
+.pixelfont {
   font-family: joystix Monospace;
 }
 
 .game-alert {
-  position: fixed; 
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -63,9 +64,17 @@ width:100%;
 }
 
 @keyframes bounce {
-  0% { transform: translate(-50%, -50%) scale(0); }
-  50% { transform: translate(-50%, -50%) scale(1.2); }
-  100% { transform: translate(-50%, -50%) scale(1); }
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
 }
 
 .coin-spin {
@@ -73,16 +82,22 @@ width:100%;
 }
 
 @keyframes spin {
-  from { transform: rotateY(0deg); }
-  to { transform: rotateY(360deg); }
+  from {
+    transform: rotateY(0deg);
+  }
+
+  to {
+    transform: rotateY(360deg);
+  }
 }
 
 @keyframes moveSkills {
   0% {
-      transform: translateX(0);
+    transform: translateX(0);
   }
+
   100% {
-      transform: translateX(-100%);
+    transform: translateX(-100%);
   }
 }
 
@@ -91,8 +106,8 @@ width:100%;
   animation: moveSkills 30s linear infinite;
 }
 
- /* Skill Icon styles with pixelated glow and hover effect */
- .skill-icon {
+/* Skill Icon styles with pixelated glow and hover effect */
+.skill-icon {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   filter: drop-shadow(0 0 10px #ffcc00);
   position: relative;
@@ -110,10 +125,11 @@ width:100%;
 /* Glow effect animation */
 @keyframes glowEffect {
   0% {
-      filter: drop-shadow(0 0 10px #ffcc00);
+    filter: drop-shadow(0 0 10px #ffcc00);
   }
+
   100% {
-      filter: drop-shadow(0 0 30px #ffcc00);
+    filter: drop-shadow(0 0 30px #ffcc00);
   }
 }
 
@@ -128,7 +144,8 @@ nav {
   align-items: center;
   justify-content: space-between;
   color: white;
-  font-family: 'Press Start 2P', cursive; /* Pixel-style font for that retro gaming effect */
+  font-family: 'Press Start 2P', cursive;
+  /* Pixel-style font for that retro gaming effect */
 }
 
 /* Part 1: "Design By ANKIT" */
@@ -202,83 +219,91 @@ nav {
   transform: scale(1.1);
 }
 
-        /* Cloud Animations */
-        @keyframes slideInLeft {
-            0% {
-                opacity: 0;
-                transform: translateX(-100%);
-            }
-            50% {
-                opacity: 1;
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(-100%);
-            }
-        }
-    
-        @keyframes slideInRight {
-            0% {
-                opacity: 0;
-                transform: translateX(-100%);
-            }
-            50% {
-                opacity: 1;
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(-100%);
-            }
-        }
-    
-        @keyframes fadeOut {
-            0% {
-                opacity: 1;
-            }
-            100% {
-                opacity: 0;
-            }
-        }    
-        #cloudLeft,
-        #cloudRight {
-            animation-duration: 5s;
-            animation-fill-mode: forwards;
-        }
+/* Cloud Animations */
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
 
-        #cloudRight{
-            rotate: 180deg;
-        }
-    
-        #enterPage.fade-out {
-            animation: fadeOut 1s ease forwards;
-        }
-    
-        /* Smooth Button Visibility */
-        #enterButton {
-            z-index: 10;
-        }
-    
-        /* Global Reset */
-        body,
-        html {
-            margin: 0;
-            height: 100%;
-            overflow: hidden; /* Prevent scrolling during animation */
-        }
-    
-        .main {
-            overflow: auto; /* Make sure your main content can scroll */
-        }
-    
-        .main.hidden {
-            display: none;
-        }
+  50% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 
-       /* font-family: 'Press Start 2P', cursive;  Gaming-inspired font */
-        
-    /* Button Styling */
-    #enterButton {
-        font-family: 'Press Start 2P', cursive;
-        letter-spacing: 2px;
-        box-shadow: 0px 4px 15px rgba(255, 165, 0, 0.7);
-    }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+#cloudLeft,
+#cloudRight {
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+
+#cloudRight {
+  rotate: 180deg;
+}
+
+#enterPage.fade-out {
+  animation: fadeOut 1s ease forwards;
+}
+
+/* Smooth Button Visibility */
+#enterButton {
+  z-index: 10;
+}
+
+/* Global Reset */
+body,
+html {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  /* Prevent scrolling during animation */
+}
+
+.main {
+  overflow: auto;
+  /* Make sure your main content can scroll */
+}
+
+.main.hidden {
+  display: none;
+}
+
+/* font-family: 'Press Start 2P', cursive;  Gaming-inspired font */
+
+/* Button Styling */
+#enterButton {
+  font-family: 'Press Start 2P', cursive;
+  letter-spacing: 2px;
+  box-shadow: 0px 4px 15px rgba(255, 165, 0, 0.7);
+}
