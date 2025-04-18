@@ -7,7 +7,7 @@
     console.error("EmailJS initialization failed", error);
   }
 })();
-
+ 
 // Updated sendEmail function to handle EmailJS email sending
 function sendEmail(event) {
   event.preventDefault();
